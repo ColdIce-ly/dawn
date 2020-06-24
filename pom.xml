@@ -38,7 +38,7 @@
         <mybatis-plus-boot-starter.version>3.3.2</mybatis-plus-boot-starter.version>
         <!--cache相关-->
         <jedis.version>3.3.0</jedis.version>
-        <redisson.version>3.11.1</redisson.version>
+        <redisson.version>3.13.1</redisson.version>
         <!--mq-->
         <!--通用-->
         <lombok.version>1.18.8</lombok.version>

@@ -8,6 +8,13 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/cache-redis-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-base/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-template-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-template-client/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-stream-server/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-stream-client/pom.xml" />
+        <option value="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/pom.xml" />
       </list>
     </option>
   </component>

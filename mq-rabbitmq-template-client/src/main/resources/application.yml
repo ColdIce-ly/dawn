@@ -1,0 +1,21 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8081
+spring:
+  application:
+    name: mq-rabbitmq-template-client
+  rabbitmq:
+    host: 11.11.11.121
+    username: guest
+    password: guest
+    port: 5672
+    virtual-host: /
+    ## 消费端配置
+    listener:
+      simple:
+        concurrency: 1
+        ## manual:手动 ack（确认）
+        acknowledge-mode: auto
+        max-concurrency: 1
+        prefetch: 1
