@@ -15,6 +15,10 @@
         <option value="$PROJECT_DIR$/mq-rabbitmq-stream-server/pom.xml" />
         <option value="$PROJECT_DIR$/mq-rabbitmq-stream-client/pom.xml" />
         <option value="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-cloud-ribbon/pom.xml" />
+        <option value="$PROJECT_DIR$/jdk-eight/pom.xml" />
+        <option value="$PROJECT_DIR$/thread-juc/pom.xml" />
+        <option value="$PROJECT_DIR$/sms/pom.xml" />
       </list>
     </option>
   </component>

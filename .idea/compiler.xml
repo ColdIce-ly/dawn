@@ -11,8 +11,12 @@
         <module name="mq-rabbitmq-template-server" />
         <module name="mq-rabbitmq-template-client" />
         <module name="cache-redis-server" />
+        <module name="jdk-eight" />
         <module name="mq-rabbitmq-stream-client" />
+        <module name="thread-juc" />
+        <module name="spring-cloud-ribbon" />
         <module name="mq-rabbitmq-stream-server" />
+        <module name="sms" />
         <module name="mq-rabbitmq-stream-client-copy" />
       </profile>
     </annotationProcessing>
@@ -31,12 +35,16 @@
       <module name="cache-redis-server" options="-parameters" />
       <module name="cache-redis-template" options="-parameters" />
       <module name="dawn" options="-parameters" />
+      <module name="jdk-eight" options="-parameters" />
       <module name="mq-rabbitmq-base" options="-parameters" />
       <module name="mq-rabbitmq-stream-client" options="-parameters" />
       <module name="mq-rabbitmq-stream-client-copy" options="-parameters" />
       <module name="mq-rabbitmq-stream-server" options="-parameters" />
       <module name="mq-rabbitmq-template-client" options="-parameters" />
       <module name="mq-rabbitmq-template-server" options="-parameters" />
+      <module name="sms" options="-parameters" />
+      <module name="spring-cloud-ribbon" options="-parameters" />
+      <module name="thread-juc" options="-parameters" />
     </option>
   </component>
 </project>

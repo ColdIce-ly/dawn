@@ -2,19 +2,80 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7498a4ed-2b72-4a0d-a044-d41176b6b7b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple/PubSubCommonSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/JdkEightApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/CommonInterFace.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/FunctionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MathTowNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MyMath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MyPrint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/lambda/LambdaTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/optional/OptionalTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/stream/StreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jdk-eight/src/test/java/com/xiaoyuan/jdk/eight/JdkEightApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsSenderConstant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/util/SmsConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/util/SmsMessageUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms/src/test/java/com/xiaoyuan/sms/SmsApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/SpringCloudRibbonApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/lb/LoadBalancer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/lb/MyLB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/test/java/com/xiaoyuan/spring/cloud/ribbon/SpringCloudRibbonApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/ThreadJucApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/atomi/AtomicDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/atomi/AtomicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/CompareAndSwap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/CompareAndSwapTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/TestCopyOnWriteArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/countdownlatch/CountDownLatchTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/countdownlatch/LatchDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/volat/ThreadDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/volat/VolatileTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ThreadPoolExecutorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ababab/AlternateDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ababab/TestABCAlternate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/callable/TestCallable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/callable/ThreadDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/forkjoin/ForkJoinSumCalculate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/forkjoin/TestForkJoinPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/lock/TestLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/lock/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/TestScheduledThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/TestThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/ThreadPoolDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Clerk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Productor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/TestProductorAndConsumerForLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Clerk.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Consumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Productor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/TestProductorAndConsumer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/readwritelock/ReadWriteLockDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/readwritelock/TestReadWriteLock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/thread8monitor/Number.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/thread8monitor/TestThread8Monitor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/thread-juc/src/test/java/com/xiaoyuan/threadjuc/ThreadJucApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/copy/controller/ReceiverMessageListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/copy/controller/ReceiverMessageListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/controller/ReceiverMessageListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/controller/ReceiverMessageListenerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/controller/SendMessageController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/service/IMessageProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/service/impl/MessageProviderImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Consumer1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Consumer2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple/SimpleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +138,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -100,11 +161,11 @@
       <recent name="com.xiaoyuan.cache.redis.server.util.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\dawn\sms\src\main\java\com\xiaoyuan\sms" />
+      <recent name="D:\code\dawn\thread-juc\src\main\java\com\xiaoyuan\threadjuc" />
+      <recent name="D:\code\dawn\jdk-eight\src\main\java\com\xiaoyuan\jdk\eight" />
+      <recent name="D:\code\dawn\spring-cloud-ribbon\src\main\java\com\xiaoyuan\spring\cloud\ribbon" />
       <recent name="D:\code\dawn\mq-rabbitmq-stream-server\src\main\java\com\xiaoyuan\mq\rabbitmq\stream\server\simple" />
-      <recent name="D:\code\dawn\mq-rabbitmq-template-client\src\main\java\com\xiaoyuan\mq\rabbitmq\template\client" />
-      <recent name="D:\code\dawn\mq-rabbitmq-template-server\src\main\java\com\xiaoyuan\mq\rabbitmq\template\server" />
-      <recent name="E:\code\self\dawn\mq-rabbitmq-template-client\src\main\java\com\xiaoyuan\mq\rabbitmq\template\client" />
-      <recent name="E:\code\self\dawn\mq-rabbitmq-template-server\src\main\java\com\xiaoyuan\mq\rabbitmq\template\server" />
     </key>
   </component>
   <component name="RestServicesNavigator">
@@ -125,6 +186,13 @@
     <configuration name="CacheRedisServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cache-redis-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.cache.redis.server.CacheRedisServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JdkEightApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jdk-eight" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.jdk.eight.JdkEightApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -171,6 +239,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.sms.SmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringCloudRibbonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-cloud-ribbon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.spring.cloud.ribbon.SpringCloudRibbonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadJucApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="thread-juc" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.threadjuc.ThreadJucApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.CacheRedisServerApplication" />
       <item itemvalue="Spring Boot.MqRabbitmqBaseApplication" />
@@ -179,6 +268,10 @@
       <item itemvalue="Spring Boot.MqRabbitmqStreamServerApplication" />
       <item itemvalue="Spring Boot.MqRabbitmqStreamClientApplication" />
       <item itemvalue="Spring Boot.MqRabbitmqStreamClientCopyApplication" />
+      <item itemvalue="Spring Boot.SpringCloudRibbonApplication" />
+      <item itemvalue="Spring Boot.JdkEightApplication" />
+      <item itemvalue="Spring Boot.ThreadJucApplication" />
+      <item itemvalue="Spring Boot.SmsApplication" />
     </list>
   </component>
   <component name="ServiceViewManager">
@@ -223,7 +316,7 @@
       <workItem from="1590829135899" duration="8000" />
       <workItem from="1592979425808" duration="13537000" />
       <workItem from="1593092450983" duration="15024000" />
-      <workItem from="1593134885302" duration="3931000" />
+      <workItem from="1593134885302" duration="8082000" />
     </task>
     <task id="LOCAL-00001" summary="重构初始化">
       <created>1592982323690</created>
@@ -246,7 +339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593110573841</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="stream rabbitmq pubsub">
+      <created>1593139004437</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1593139004437</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +369,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="重构初始化" />
     <MESSAGE value="rabbitTemplate实现各种队列" />
-    <option name="LAST_COMMIT_MESSAGE" value="rabbitTemplate实现各种队列" />
+    <MESSAGE value="stream rabbitmq pubsub" />
+    <option name="LAST_COMMIT_MESSAGE" value="stream rabbitmq pubsub" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1590591385231">
@@ -280,6 +381,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" width="1164" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1592983887629" />
+    <state x="569" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1593147592709">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="569" y="236" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593147592709" />
     <state x="329" y="337" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1592986216765">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -292,11 +397,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1592986218350" />
-    <state x="465" y="8" key="CommitChangelistDialog2" timestamp="1593110571167">
+    <state x="465" y="8" key="CommitChangelistDialog2" timestamp="1593147971323">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592982321297" />
-    <state x="465" y="8" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593110571167" />
+    <state x="465" y="8" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593147971323" />
     <state x="964" y="378" key="FileChooserDialogImpl" timestamp="1587969574979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -383,11 +488,11 @@
     </state>
     <state width="498" height="540" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1592984328907" />
     <state width="498" height="468" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1587966527664" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593110579694">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593147974853">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592982379943" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593110579694" />
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593147974853" />
     <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593134885968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -401,10 +506,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="713" y="261" width="786" height="590" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587961663784" />
-    <state x="397" y="121" width="899" height="565" key="new project wizard" timestamp="1592986845273">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="315" y="236" width="899" height="565" key="new project wizard" timestamp="1593147783134">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="397" y="121" width="899" height="565" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1592986845273" />
-    <state x="501" y="263" width="1123" height="566" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1588587768292" />
+    <state x="315" y="236" width="1123" height="566" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1593147783134" />
   </component>
 </project>
