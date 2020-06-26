@@ -12,7 +12,7 @@ spring:
           environment: #设置rabbitmq的相关环境配置
             spring:
               rabbitmq:
-                host: localhost
+                host: 11.11.11.121
                 port: 5672
                 username: guest
                 password: guest
@@ -22,13 +22,3 @@ spring:
           content-type: application/json #设置消息类型，本次为json，本文要设置为“text/plain”
           binder: defaultRabbit #设置要绑定的消息服务的具体设置
           group: shenzhen
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:7001/eureka
-  instance:
-    lease-renewal-interval-in-seconds: 2 #设置心跳的时间间隔（默认是30S)
-    lease-expiration-duration-in-seconds: 5 #如果超过5S间隔就注销节点 默认是90s
-    instance-id: receive-8803.com #在信息列表时显示主机名称
-    prefer-ip-address: true #访问的路径变为IP地址

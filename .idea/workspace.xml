@@ -2,33 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7498a4ed-2b72-4a0d-a044-d41176b6b7b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/direct/DirectConsumer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/direct/DirectConsumer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/direct/DirectParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/pubsub/FanoutConsumer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/pubsub/FanoutConsumer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/pubsub/FanoutParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/topic/TopicConsumer1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/topic/TopicConsumer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/topic/TopicParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/direct/DirectParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/direct/DirectProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/pubsub/FanoutParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/pubsub/PubSubProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/topic/TopicParamConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/topic/TopicProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple/PubSubCommonSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/ParamConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/SimpleParamConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/SimpleConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/SimpleConsumer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/SimpleConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/simple/SimpleConsumer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/ParamConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/WorkParamConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/WorkConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/WorkConsumer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/WorkConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client/work/WorkConsumer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/simple/ParamConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/simple/SimpleParamConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/simple/SimpleProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/simple/SimpleProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/work/ParamConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/work/WorkParamConstant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/work/WorkProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java/com/xiaoyuan/mq/rabbitmq/template/server/work/WorkProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/copy/controller/ReceiverMessageListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/copy/controller/ReceiverMessageListenerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/controller/ReceiverMessageListenerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/client/controller/ReceiverMessageListenerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/controller/SendMessageController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/service/IMessageProvider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/service/impl/MessageProviderImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Consumer1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Consumer2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/stream/Provider.java" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple/SimpleProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -90,12 +77,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java/com/xiaoyuan/mq/rabbitmq/template/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java/com/xiaoyuan/mq/rabbitmq/stream/server/simple" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -113,28 +100,28 @@
       <recent name="com.xiaoyuan.cache.redis.server.util.configuration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\dawn\mq-rabbitmq-stream-server\src\main\java\com\xiaoyuan\mq\rabbitmq\stream\server\simple" />
       <recent name="D:\code\dawn\mq-rabbitmq-template-client\src\main\java\com\xiaoyuan\mq\rabbitmq\template\client" />
       <recent name="D:\code\dawn\mq-rabbitmq-template-server\src\main\java\com\xiaoyuan\mq\rabbitmq\template\server" />
       <recent name="E:\code\self\dawn\mq-rabbitmq-template-client\src\main\java\com\xiaoyuan\mq\rabbitmq\template\client" />
       <recent name="E:\code\self\dawn\mq-rabbitmq-template-server\src\main\java\com\xiaoyuan\mq\rabbitmq\template\server" />
-      <recent name="E:\code\self\dawn\mq-rabbitmq-stream-client-copy\src\main\resources" />
     </key>
   </component>
   <component name="RestServicesNavigator">
     <treeState>
       <expand>
         <path>
-          <item name="Found 9 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 8 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 9 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="mq-rabbitmq-template-server" type="c588b436:RestServiceStructure$ProjectNode" />
+          <item name="Found 8 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="mq-rabbitmq-stream-server" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="RunManager" selected="Spring Boot.MqRabbitmqTemplateServerApplication">
+  <component name="RunManager" selected="Spring Boot.MqRabbitmqStreamServerApplication">
     <configuration name="CacheRedisServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="cache-redis-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.cache.redis.server.CacheRedisServerApplication" />
@@ -235,7 +222,8 @@
       <workItem from="1590654601876" duration="87000" />
       <workItem from="1590829135899" duration="8000" />
       <workItem from="1592979425808" duration="13537000" />
-      <workItem from="1593092450983" duration="14827000" />
+      <workItem from="1593092450983" duration="15024000" />
+      <workItem from="1593134885302" duration="3931000" />
     </task>
     <task id="LOCAL-00001" summary="重构初始化">
       <created>1592982323690</created>
@@ -251,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593092855479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="rabbitTemplate实现各种队列">
+      <created>1593110573841</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1593110573841</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,7 +257,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -271,7 +268,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="重构初始化" />
-    <option name="LAST_COMMIT_MESSAGE" value="重构初始化" />
+    <MESSAGE value="rabbitTemplate实现各种队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="rabbitTemplate实现各种队列" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Notifications" timestamp="1590591385231">
@@ -294,11 +292,11 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="470" y="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.824@0.0.1536.824" timestamp="1592986218350" />
-    <state x="465" y="8" key="CommitChangelistDialog2" timestamp="1593092853309">
+    <state x="465" y="8" key="CommitChangelistDialog2" timestamp="1593110571167">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="372" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592982321297" />
-    <state x="465" y="8" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593092853309" />
+    <state x="465" y="8" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593110571167" />
     <state x="964" y="378" key="FileChooserDialogImpl" timestamp="1587969574979">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -311,71 +309,71 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1125" y="223" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591709495066" />
-    <state width="1763" height="314" key="GridCell.Tab.0.bottom" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.0.bottom" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.0.center" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.0.center" timestamp="1593137756049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.0.left" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756049" />
+    <state width="1467" height="301" key="GridCell.Tab.0.left" timestamp="1593137756048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.0.right" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756048" />
+    <state width="1467" height="301" key="GridCell.Tab.0.right" timestamp="1593137756050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.1.bottom" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756050" />
+    <state width="1467" height="301" key="GridCell.Tab.1.bottom" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.1.center" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.1.center" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.1.left" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.1.left" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.1.right" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.1.right" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.2.bottom" timestamp="1593110270436">
+    <state width="1467" height="301" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.2.bottom" timestamp="1593137756052">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270436" />
-    <state width="1763" height="314" key="GridCell.Tab.2.center" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756052" />
+    <state width="1467" height="301" key="GridCell.Tab.2.center" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.2.left" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.2.left" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state width="1763" height="314" key="GridCell.Tab.2.right" timestamp="1593110270435">
+    <state width="1467" height="301" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state width="1467" height="301" key="GridCell.Tab.2.right" timestamp="1593137756051">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1493" height="273" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1592992460033" />
-    <state width="1763" height="314" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593110270435" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1593092702725">
+    <state width="1467" height="301" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593137756051" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1593134942576">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="369" y="109" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1592982367559" />
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593092702725" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1593134942576" />
     <state x="490" y="154" width="540" height="524" key="StructurePopup" timestamp="1592987403042">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -385,15 +383,15 @@
     </state>
     <state width="498" height="540" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1592984328907" />
     <state width="498" height="468" key="SwitcherDM/0.0.1920.1040@0.0.1920.1040" timestamp="1587966527664" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593092858337">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2" timestamp="1593110579694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1592982379943" />
-    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593092858337" />
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589867620913">
+    <state x="451" y="183" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593110579694" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593134885968">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589867620913" />
+    <state x="640" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593134885968" />
     <state x="703" y="415" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593092966199">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
