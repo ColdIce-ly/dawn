@@ -53,7 +53,9 @@
         <!--工具类-->
         <guava.version>28.1-jre</guava.version>
         <zip4j.version>2.1.2</zip4j.version>
-        <hutool-all.version>5.1.0</hutool-all.version>
+        <hutool.version>5.1.0</hutool.version>
+
+        <seata.version>1.2.0</seata.version>
     </properties>
 
     <!-- 子模块继承之后，提供作用：锁定版本 + 子module不用谢groupId和version -->
@@ -100,6 +102,25 @@
                 <groupId>org.redisson</groupId>
                 <artifactId>redisson</artifactId>
                 <version>${redisson.version}</version>
+            </dependency>
+
+            <!--分布式事务-->
+            <dependency>
+                <groupId>io.seata</groupId>
+                <artifactId>seata-all</artifactId>
+                <version>${seata.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.verson}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

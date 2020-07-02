@@ -4,9 +4,16 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author liyuan
+ * @description 打印abcabcabcabcabc
+ */
 public class AlternateDemo{
-	
-	private int number = 1; //当前正在执行线程的标记
+
+	/**
+	 * 当前正在执行线程的标记
+	 */
+	private int number = 1;
 	
 	private Lock lock = new ReentrantLock();
 	private Condition condition1 = lock.newCondition();
