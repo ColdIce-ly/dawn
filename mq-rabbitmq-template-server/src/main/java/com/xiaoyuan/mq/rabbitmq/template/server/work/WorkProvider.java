@@ -1,11 +1,13 @@
 package com.xiaoyuan.mq.rabbitmq.template.server.work;
 
 
+import com.xiaoyuan.mq.rabbitmq.template.server.config.RabbitConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.PostConstruct;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -25,16 +27,10 @@ public class WorkProvider {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    //回调函数: confirm确认
-    final RabbitTemplate.ConfirmCallback confirmCallback = (correlationData, ack, cause) -> {
-        if(ack){
-            //如果confirm返回成功 则进行更新
-            System.out.println("推送成功.....");
-        } else {
-            //失败则进行具体的后续操作:重试 或者补偿等手段
-            System.err.println("异常处理...");
-        }
-    };
+    @PostConstruct
+    public void init() {
+//        rabbitTemplate.setConfirmCallback(RabbitConfig.confirmCallback);
+    }
 
     @GetMapping("/work")
     public String send(int i) {
@@ -43,8 +39,9 @@ public class WorkProvider {
         //简单对列的情况下routingKey即为Q名
         new Random().ints().limit(i).forEach(a -> {
             // 通过实现 ConfirmCallback 接口，消息发送到 Broker 后触发回调，确认消息是否到达 Broker 服务器，也就是只确认是否正确到达 Exchange 中
-            rabbitTemplate.setConfirmCallback(confirmCallback);
             System.out.println("Sender : " + a + " " + context);
+            // 可靠消息投递
+            rabbitTemplate.setConfirmCallback(RabbitConfig.CONFIRM_CALLBACK);
             this.rabbitTemplate.convertAndSend(WorkParamConstant.QUEUE_NAME, a + " : " + context);
         });
         return "success";
