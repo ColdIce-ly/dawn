@@ -10,10 +10,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
 
-/**
- * WebSocketController
- * @author zhengkai.blog.csdn.net
- */
 @Controller
 public class DemoController {
 

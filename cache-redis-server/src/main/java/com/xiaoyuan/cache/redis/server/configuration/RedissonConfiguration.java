@@ -50,9 +50,35 @@ public class RedissonConfiguration {
                 .setConnectTimeout(connectTimeout)
                 .setIdleConnectionTimeout(idleConnectionTimeout)
                 .setPassword(password);
+
+        // cluster集群化配置
+//        config.useClusterServers()
+//                .addNodeAddress("redis://11.11.11.111:6379")
+//                .addNodeAddress("redis://11.11.11.112:6379")
+//                .addNodeAddress("redis://11.11.11.113:6379")
+//                .addNodeAddress("redis://11.11.11.114:6379")
+//                .addNodeAddress("redis://11.11.11.115:6379")
+//                .addNodeAddress("redis://11.11.11.116:6379")
+//                .addNodeAddress("redis://11.11.11.117:6379")
+//                .addNodeAddress("redis://11.11.11.118:6379")
+//                .addNodeAddress("redis://11.11.11.119:6379")
+//                .setMasterConnectionMinimumIdleSize(connectionMinimumIdleSize)
+//                .setMasterConnectionPoolSize(connectionPoolSize)
+//                .setDnsMonitoringInterval(dnsMonitoringInterval)
+//                .setSubscriptionConnectionMinimumIdleSize(subscriptionConnectionMinimumIdleSize)
+//                .setSubscriptionConnectionPoolSize(subscriptionConnectionPoolSize)
+//                .setClientName(clientName)
+//                .setRetryAttempts(retryAttempts)
+//                .setRetryInterval(retryInterval)
+//                .setTimeout(timeout)
+//                .setConnectTimeout(connectTimeout)
+//                .setIdleConnectionTimeout(idleConnectionTimeout)
+//                .setPassword(password);
+
         Codec codec = (Codec) ClassUtils.forName("org.redisson.codec.JsonJacksonCodec", ClassUtils.getDefaultClassLoader()).newInstance();
         config.setCodec(codec);
         config.setEventLoopGroup(new NioEventLoopGroup());
+
         return Redisson.create(config);
     }
 
