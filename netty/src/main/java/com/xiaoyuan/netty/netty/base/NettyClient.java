@@ -20,6 +20,7 @@ public class NettyClient {
             bootstrap.group(group) //设置线程组
                     .channel(NioSocketChannel.class) // 使用NioSocketChannel作为客户端的通道实现
                     .handler(new ChannelInitializer<SocketChannel>() {
+                        // 向服务器发起沟通连接,准备以后要发数据
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             //加入处理器
