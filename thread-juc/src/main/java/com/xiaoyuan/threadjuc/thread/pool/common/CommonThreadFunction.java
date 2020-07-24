@@ -9,7 +9,7 @@ package com.xiaoyuan.threadjuc.thread.pool.common;
 public interface CommonThreadFunction {
 
     /**
-     * @description 执行异步任务,无返回值
+     * @description 无参数,无返回值
      */
     void perform();
 }
