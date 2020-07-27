@@ -1,7 +1,12 @@
 package com.xiaoyuan.threadjuc.thread.pool.common;
 
 
+import java.util.HashMap;
 import java.util.concurrent.*;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
 
 /**
  * @author : liyuan  
@@ -37,28 +42,13 @@ public class CommonThreadPool {
     }
 
     /**
-     * @param threadSupplier 有返回值业务
+     * @param supplier 有返回值业务
      * @description 执行业务, 无返回值; 当心吞异常哦!
      */
-    public static <R> R perform(ThreadSupplier<R> threadSupplier) throws ExecutionException, InterruptedException {
-        // 这种可以修改completableFuture.get()的返回值
-/*        CompletableFuture<Integer> completableFuture = CompletableFuture.supplyAsync(() -> {
+    public static <T> T perform(Supplier<T> supplier) throws ExecutionException, InterruptedException {
+        CompletableFuture<T> completableFuture = CompletableFuture.supplyAsync(() -> {
             System.out.println(Thread.currentThread().getId() + "线程执行----------");
-            return 1;
-        }, threadPoolExecutor).handle((res, thr) -> {
-            // 方法执行完成之后的处理
-            if (res != null) {
-                return res * 2;
-            }
-            if (thr != null) {
-                return 0;
-            }
-            return 0;
-        });*/
-
-        CompletableFuture<R> completableFuture = CompletableFuture.supplyAsync(() -> {
-            System.out.println(Thread.currentThread().getId() + "线程执行----------");
-            return threadSupplier.perform();
+            return supplier.get();
         }, threadPoolExecutor).whenComplete((res, exception) -> {
             System.out.println("成功:" + res + "异常是:" + exception);
         }).exceptionally(throwable -> {
@@ -69,51 +59,77 @@ public class CommonThreadPool {
     }
 
     /**
-     * @param threadSupplier 双业务,第二个线程不接受上一个线程的结果,返回值是第一个线程的
+     * @param supplier 有返回值业务,并且对返回值和异常一起处理
      * @description 执行业务, 无返回值; 当心吞异常哦!
      */
-    public static Void performNotAccept(ThreadSupplier<Void> threadSupplier, CommonThreadFunction commonThreadFunction) throws ExecutionException, InterruptedException {
-        CompletableFuture<Void> completableFuture = CompletableFuture.supplyAsync(() -> {
+    public static <T, Throwable, R> R perform(Supplier<T> supplier, BiFunction<T, Throwable, R> biFunction) throws ExecutionException, InterruptedException {
+        CompletableFuture<R> completableFuture = CompletableFuture.supplyAsync(() -> {
             System.out.println(Thread.currentThread().getId() + "线程执行----------");
-            return threadSupplier.perform();
+            return supplier.get();
+        }, threadPoolExecutor).handle((res, thr) -> {
+            // 方法执行完成之后的处理
+            return biFunction.apply(res, (Throwable) thr);
+        });
+        return completableFuture.get();
+    }
+
+    /**
+     * @param commonThreadFunction1 双业务,第二个线程不接受上一个线程的结果
+     * @param commonThreadFunction2 双业务,第二个线程不接受上一个线程的结果
+     * @description 执行业务, 无返回值; 当心吞异常哦!
+     */
+    public static void perform(CommonThreadFunction commonThreadFunction1, CommonThreadFunction commonThreadFunction2) {
+        CompletableFuture.runAsync(() -> {
+            System.out.println(Thread.currentThread().getId() + "线程执行----------");
+            commonThreadFunction1.perform();
         }, threadPoolExecutor).thenRunAsync(() -> {
             System.out.println("串行处理没有返回值,不接受第一次的返回值");
-            commonThreadFunction.perform();
-        }, threadPoolExecutor);
-        // 获取第1个线程的返回值
-        return completableFuture.get();
+            commonThreadFunction2.perform();
+        }, threadPoolExecutor).exceptionally(exception -> {
+            System.out.println(exception.getMessage());
+            return null;
+        });
     }
 
     /**
-     * @param threadSupplier 双业务,第二个线程接受上一个线程的结果,返回值是第一个线程的
+     * @param supplier 双业务,第二个线程接受上一个线程的结果,返回第一个线程的返回值,等待两个线程全部执行结束
      * @description 执行业务, 无返回值; 当心吞异常哦!
      */
-    public static Void performAccept(ThreadSupplier threadSupplier, ThreadConsumer threadConsumer) throws ExecutionException, InterruptedException {
+    public static <U> U perform(Supplier<U> supplier, Consumer<U> consumer) throws ExecutionException, InterruptedException {
+        HashMap<Integer, U> hashMap = new HashMap<>(16);
         CompletableFuture<Void> completableFuture = CompletableFuture.supplyAsync(() -> {
-            System.out.println(Thread.currentThread().getId() + "线程执行----------");
-            return threadSupplier.perform();
+            System.out.println(Thread.currentThread().getId() + "线程执行第一个----------");
+            U perform = supplier.get();
+            hashMap.put(0, perform);
+            return perform;
         }, threadPoolExecutor).thenAcceptAsync(res -> {
             System.out.println("串行处理没有返回值,接受第一次的返回值" + res);
-            threadConsumer.perform(res);
-        }, threadPoolExecutor);
-        // 获取第1个线程的返回值
-        return completableFuture.get();
+            consumer.accept(res);
+        }, threadPoolExecutor).exceptionally(exception -> {
+            System.out.println(exception.getMessage());
+            hashMap.put(0, null);
+            return null;
+        });
+        // 阻塞,确保第二个线程执行结束
+        completableFuture.get();
+        return hashMap.get(0);
     }
 
     /**
-     * @param threadSupplier 双业务,第二个线程接受上一个线程的结果,返回值是第一个线程的
+     * @param threadSupplier 双业务,第二个线程接受上一个线程的结果,返回值是第二个线程的
      * @description 执行业务, 无返回值; 当心吞异常哦!
      */
- /*   public static <Object> Object performAccept(ThreadSupplier<Void> threadSupplier, ThreadSupplier threadSupplier2) throws ExecutionException, InterruptedException {
-        CompletableFuture<Void> completableFuture = CompletableFuture.supplyAsync(() -> {
+    public static <T, R> R perform(Supplier<T> threadSupplier, Function<T, R> function) throws ExecutionException, InterruptedException {
+        CompletableFuture<R> completableFuture = CompletableFuture.supplyAsync(() -> {
             System.out.println(Thread.currentThread().getId() + "线程执行----------");
-            return threadSupplier.perform();
-        }, threadPoolExecutor).thenAcceptAsync(res -> {
-            System.out.println("串行处理没有返回值,接受第一次的返回值" + res);
-            threadSupplier2.perform();
-            return;
-        }, threadPoolExecutor);
-        // 获取第1个线程的返回值
+            return threadSupplier.get();
+        }, threadPoolExecutor).thenApplyAsync(res -> {
+            System.out.println(Thread.currentThread().getId() + "线程执行----------");
+            return function.apply(res);
+        }, threadPoolExecutor).exceptionally(exception -> {
+            System.out.println(exception.getMessage());
+            return null;
+        });
         return completableFuture.get();
-    }*/
+    }
 }
