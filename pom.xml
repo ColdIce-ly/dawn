@@ -21,12 +21,14 @@
     <modules>
         <module>cache-redis-server</module>
         <module>jdk-eight</module>
+        <module>jvm</module>
         <module>mq-rabbitmq-base</module>
         <module>mq-rabbitmq-stream-client</module>
         <module>mq-rabbitmq-stream-client-copy</module>
         <module>mq-rabbitmq-stream-server</module>
         <module>mq-rabbitmq-template-client</module>
         <module>mq-rabbitmq-template-server</module>
+        <module>netty</module>
         <module>sms</module>
         <module>spring-cloud-ribbon</module>
         <module>thread-juc</module>
