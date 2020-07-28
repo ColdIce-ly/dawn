@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.redisson.RedissonRedLock;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.script.DefaultRedisScript;
@@ -24,7 +25,7 @@ public class DistributedLockTests {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
-    @Resource
+    @Autowired
     private RedissonClient redissonClient;
 
     /**
@@ -61,15 +62,15 @@ public class DistributedLockTests {
     @Test
     public void redissonClientLock(){
 
-        String lockKey = "meToLock";
+        String lockKey = "lockClientId_37";
 
         RLock redissonLock = redissonClient.getLock(lockKey);
         try {
             redissonLock.lock();
-            int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get("stock"));
+            int stock = Integer.parseInt(stringRedisTemplate.opsForValue().get("LIVE_VIEWS_TIMES:LV20071500001"));
             if (stock > 0) {
                 int realStock = stock - 1;
-                stringRedisTemplate.opsForValue().decrement("stock");
+                stringRedisTemplate.opsForValue().decrement("LIVE_VIEWS_TIMES:LV20071500001");
                 System.out.println("扣减成功，剩余库存:" + realStock);
             } else {
                 System.out.println("失败");
@@ -160,7 +161,4 @@ public class DistributedLockTests {
         }
 
     }
-
-
-
 }
