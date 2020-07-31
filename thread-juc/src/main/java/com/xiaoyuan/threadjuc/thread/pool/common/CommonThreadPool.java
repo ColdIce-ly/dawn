@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 /**
  * @author : liyuan  
  * @description : 普通线程池,专门处理业务逻辑
- * @date : 2020/7/17 12:26  
+ * @date : 2020/1/17 12:26  
  */
 public class CommonThreadPool {
 
