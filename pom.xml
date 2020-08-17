@@ -20,7 +20,6 @@
     <!-- 服务 -->
     <modules>
         <module>cache-redis-server</module>
-        <module>demo</module>
         <module>jdk-eight</module>
         <module>jvm</module>
         <module>mq-rabbitmq-base</module>
