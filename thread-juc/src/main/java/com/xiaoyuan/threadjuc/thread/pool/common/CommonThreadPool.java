@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 /**
  * @author : liyuan  
  * @description : 普通线程池,专门处理业务逻辑
- * @date : 2020/1/17 12:26  
+ * @date : 2019/6/17 12:26  
  */
 public class CommonThreadPool {
 
@@ -25,7 +25,7 @@ public class CommonThreadPool {
      * @param threadFactory   创建线程的工厂
      * @param handler         如果阻塞队列满了,按照我们指定的拒绝策略拒绝执行任务
      */
-    public static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 20, 30, TimeUnit.SECONDS, new LinkedBlockingDeque<>(100), Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
+    public static ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(Runtime.getRuntime().availableProcessors(), 20, 30, TimeUnit.SECONDS, new LinkedBlockingDeque<>(100), Executors.defaultThreadFactory(), new ThreadPoolExecutor.CallerRunsPolicy());
 
     /**
      * @param commonThreadFunction 业务
