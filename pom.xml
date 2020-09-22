@@ -33,6 +33,7 @@
         <module>spring-cloud-ribbon</module>
         <module>thread-juc</module>
         <module>websocket</module>
+        <module>designpattern</module>
     </modules>
 
     <!-- 统一管理jar包版本2020-06-24-->
