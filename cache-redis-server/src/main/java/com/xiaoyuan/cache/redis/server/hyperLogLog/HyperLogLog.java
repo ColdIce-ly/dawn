@@ -29,7 +29,6 @@ public class HyperLogLog {
     public void pfAdd(String key, String... values) {
         HyperLogLogOperations<String, String> hyperLogLogOperations = stringRedisTemplate.opsForHyperLogLog();
         hyperLogLogOperations.add(key,values);
-
     }
 
     /**

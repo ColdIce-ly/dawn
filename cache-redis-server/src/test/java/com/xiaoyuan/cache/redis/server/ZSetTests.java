@@ -7,33 +7,24 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import javax.annotation.Resource;
-import java.util.UUID;
 
 /**
  * @author : liyuan  
  * @description :
- * @date : 2020/8/10 10:23  
+ * @date : 2020/9/15 9:48  
  */
 @SpringBootTest
-public class RedisTests {
-
+public class ZSetTests {
 
     @Resource
     private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private RedissonClient redissonClient;
 
+
     @Test
-    public void init() {
-        String chatLog = "LIVE_CHAT_ROOM_LOG";
-        int i = 0;
-        for(;;){
-            if(i < 1){
-                stringRedisTemplate.opsForHyperLogLog().add(chatLog, UUID.randomUUID().toString());
-                i++;
-            }else {
-                break;
-            }
-        }
+    void init(){
+        Double score = stringRedisTemplate.opsForZSet().score("LIVE_ABNORMAL_EXIT", "liveCode");
+        System.out.println();
     }
 }
