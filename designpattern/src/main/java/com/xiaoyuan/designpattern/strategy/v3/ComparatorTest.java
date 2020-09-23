@@ -1,8 +1,19 @@
 package com.xiaoyuan.designpattern.strategy.v3;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
+/**
+ * @author : liyuan  
+ * @description : 策略模式
+ * 应用场景
+ * 1.当你有很多类似的类，但它们执行某些行为的方式不同时，请使用此
+ * 策略。
+ * 2.使用该模式将类的业务逻辑与算法的实现细节隔离开来，这些算法在
+ * 逻辑上下文中可能不那么重要。
+ * 3.当你的类具有大量的条件运算符，并且在同一算法的不同变体之间切
+ * 换时，请使用此模式。
+ * @date : 2020/9/23 17:44  
+ */
 public class ComparatorTest {
     public static void main(String[] args) {
         Person[] persons =
@@ -15,72 +26,8 @@ public class ComparatorTest {
     }
 
     static void print(Person[] array) {
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
+        for (Person person : array) {
+            System.out.println(person);
         }
-
-    }
-}
-
-//策略1 根据年龄排序
-class SortByAge implements Comparator<Person> {
-
-    @Override
-    public int compare(Person o1, Person o2) {
-        if (o1.getAge() > o2.getAge()) {
-            return 1;
-        } else if (o1.getAge() < o2.getAge()) {
-            return -1;
-        }
-        return 0;
-    }
-}
-
-//策略2 根据身高排序
-class SortByHeight implements Comparator<Person> {
-
-    @Override
-    public int compare(Person o1, Person o2) {
-        if (o1.getHeight() > o2.getHeight()) {
-            return 1;
-        } else if (o1.getHeight() < o2.getHeight()) {
-            return -1;
-        }
-        return 0;
-    }
-}
-
-class Person {
-
-    int age;
-    int height;
-
-    public Person(int age, int height) {
-        this.age = age;
-        this.height = height;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "age=" + age +
-                ", height=" + height +
-                '}';
     }
 }
