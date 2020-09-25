@@ -29,6 +29,7 @@
         <module>mq-rabbitmq-template-client</module>
         <module>mq-rabbitmq-template-server</module>
         <module>netty</module>
+        <module>poi</module>
         <module>sms</module>
         <module>spring-cloud-ribbon</module>
         <module>thread-juc</module>
