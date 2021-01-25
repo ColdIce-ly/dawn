@@ -10,6 +10,18 @@ import java.util.concurrent.locks.AbstractOwnableSynchronizer;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.LockSupport;
 
+/**
+ * @author
+ * @description 依赖状态(state)的同步器。定义两种队列:
+ * 条件等待队列:  Condition是一个多线程间协调通信的工具类，使得某个，或者某些线程一起等待某个条件（Condition）,只有当该条件具备时，这些等待线程才会被唤醒，从而重新争夺锁
+ * 同步等待队列: 基于双向链表数据结构的队列，是FIFO先入先出线程等待队列，Java中的CLH队列是原CLH队列的一个变种,线程由原自旋机制改为阻塞机制
+ * AQS具备特性:
+ * 阻塞等待队列
+ * 共享/独占
+ * 公平/非公平
+ * 可重入
+ * 允许中断
+ */
 public abstract class AbstractQueuedSynchronizer
         extends AbstractOwnableSynchronizer
         implements java.io.Serializable {
@@ -34,11 +46,11 @@ public abstract class AbstractQueuedSynchronizer
      */
     static final class Node {
         /**
-         * 标记节点为共享模式
+         * 标记节点为共享模式 如Semaphore/CountDownLatch
          */
         static final Node SHARED = new Node();
         /**
-         * 标记节点为独占模式
+         * 标记节点为独占模式 如ReentrantLock
          */
         static final Node EXCLUSIVE = null;
 
@@ -108,17 +120,17 @@ public abstract class AbstractQueuedSynchronizer
             }
         }
 
-        //空节点，用于标记共享模式
+        // 空节点，用于标记共享模式
         Node() {    // Used to establish initial head or SHARED marker
         }
 
-        //用于同步队列CLH
+        // 用于同步队列CLH
         Node(Thread thread, Node mode) {     // Used by addWaiter
             this.nextWaiter = mode;
             this.thread = thread;
         }
 
-        //用于条件队列
+        // 用于条件队列
         Node(Thread thread, int waitStatus) { // Used by Condition
             this.waitStatus = waitStatus;
             this.thread = thread;
@@ -183,7 +195,7 @@ public abstract class AbstractQueuedSynchronizer
         for (; ; ) {
             Node t = tail;
             if (t == null) { // Must initialize
-                //队列为空需要初始化，创建空的头节点
+                // 队列为空需要初始化，创建空的头节点,同步等待队列的头和尾都是空的node对象,不是null
                 if (compareAndSetHead(new Node())) {
                     tail = head;
                 }
@@ -683,7 +695,7 @@ public abstract class AbstractQueuedSynchronizer
     }
 
     /**
-     * 当前线程是否持有独占锁
+     * 当前线程是否持有独占锁,只有用到condition才需要去实现它。
      */
     protected boolean isHeldExclusively() {
         throw new UnsupportedOperationException();
@@ -1200,8 +1212,8 @@ public abstract class AbstractQueuedSynchronizer
          */
         @Override
         public final void signal() {
-            if (!isHeldExclusively())//节点不能已经持有独占锁
-            {
+            if (!isHeldExclusively()) {
+                //节点不能已经持有独占锁
                 throw new IllegalMonitorStateException();
             }
             Node first = firstWaiter;
