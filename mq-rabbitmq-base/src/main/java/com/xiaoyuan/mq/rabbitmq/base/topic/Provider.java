@@ -1,8 +1,7 @@
 package com.xiaoyuan.mq.rabbitmq.base.topic;
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
+import com.xiaoyuan.mq.rabbitmq.base.config.RabbitMQConnection;
 
 /**
  * @author liyuan
@@ -14,25 +13,31 @@ import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
 public class Provider {
 
     public static void main(String[] argv) throws Exception {
-        // 获取到连接以及mq通道
-        Connection connection = RabbitMqConnectionUtil.getConnection();
-        Channel channel = connection.createChannel();
-
+        Channel channel = RabbitMQConnection.createChannel();
         // 声明exchange
-        channel.exchangeDeclare(ParamConstant.EXCHANGE_NAME, "topic");
+        channel.exchangeDeclare(ParamConstant.EXCHANGE_NAME, ParamConstant.EXCHANGE_TYPE);
 
         // 消息内容
         String message = "Hello World!!";
-        // 只有消费者2接受
-//        String key = "asdas.0.1";
-        // 只有消费者1接受
-//        String key = "routekey.122.sds";
-        // 两个都可以接受
-        String key = "routekey.1";
-        channel.basicPublish(ParamConstant.EXCHANGE_NAME, key, null, message.getBytes());
-        System.out.println(" [x] Sent '" + message + "'");
 
-        channel.close();
-        connection.close();
+
+        // 都不可以接受
+        String key = "abcdef";
+
+
+        // 只有消费者2接受
+        // String key = "asdas.0.1";
+
+
+        // 只有消费者1接受
+        // String key = "routekey.122.sds";
+
+
+        // 两个都可以接受
+        // String key = "routekey.1";
+
+        channel.basicPublish(ParamConstant.EXCHANGE_NAME, key, null, message.getBytes());
+        System.out.println(" [Provider] Sent '" + message + "'");
+
     }
 }

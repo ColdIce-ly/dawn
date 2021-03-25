@@ -2,9 +2,10 @@ package com.xiaoyuan.mq.rabbitmq.base.work;
 
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.DeliverCallback;
-import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
+import com.xiaoyuan.mq.rabbitmq.base.config.RabbitMQConnection;
+
+import java.nio.charset.StandardCharsets;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author liyuan
@@ -19,25 +20,21 @@ public class Consumer2 {
 
     public static void main(String[] argv) throws Exception {
 
-        // 获取到连接以及mq通道
-        Connection connection = RabbitMqConnectionUtil.getConnection();
-        Channel channel = connection.createChannel();
-
-        // 声明队列
+        Channel channel = RabbitMQConnection.createChannel();
         channel.queueDeclare(ParamConstant.QUEUE_NAME, false, false, false, null);
 
         // 同一时刻服务器只会发一条消息给消费者
         channel.basicQos(1);
 
-        // 定义队列的消费者
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            //开启这行 表示使用手动确认模式
-            String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received2 '" + message + "'");
-            channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
-        };
-        channel.basicConsume(ParamConstant.QUEUE_NAME, false, deliverCallback, consumerTag -> {
-        });
+        AtomicInteger atomicInteger = new AtomicInteger(0);
 
+        channel.basicConsume(ParamConstant.QUEUE_NAME, false, (consumerTag, delivery) -> {
+
+            String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
+            System.out.println(" [Consumer2] Received2 '" + message + "'");
+            channel.basicAck(delivery.getEnvelope().getDeliveryTag(), false);
+            System.out.println("Consumer2 消费了:" + atomicInteger.incrementAndGet() + "次");
+        }, consumerTag -> {
+        });
     }
 }

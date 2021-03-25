@@ -6,7 +6,7 @@ spring:
   application:
     name: mq-rabbitmq-base
   rabbitmq:
-    host: 11.11.11.121
+    host: 8.136.185.56
     username: guest
     password: guest
     port: 5672

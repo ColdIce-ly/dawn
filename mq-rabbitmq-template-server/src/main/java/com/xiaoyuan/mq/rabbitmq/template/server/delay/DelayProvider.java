@@ -1,5 +1,6 @@
 package com.xiaoyuan.mq.rabbitmq.template.server.delay;
 
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -41,7 +42,7 @@ public class DelayProvider {
         rabbitTemplate.setConfirmCallback(confirmCallback);
         System.out.println("Sender : " + message);
         this.rabbitTemplate.convertAndSend(DelayParamConstant.EXCHANGE_NAME, routingKey, message, message1 -> {
-            message1.getMessageProperties().setHeader("x-delay", 30000);//设置延迟时间
+            message1.getMessageProperties().setHeader(MessageProperties.X_DELAY, 30000);//设置延迟时间
             return message1;
         });
         return "success";

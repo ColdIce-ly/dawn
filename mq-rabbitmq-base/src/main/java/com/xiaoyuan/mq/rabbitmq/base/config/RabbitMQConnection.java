@@ -1,35 +1,67 @@
-package com.xiaoyuan.mq.rabbitmq.base.description;
+package com.xiaoyuan.mq.rabbitmq.base.config;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
 
 import java.io.IOException;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 /**
- * @author liyuan
- * @description
- * @date 2020-01-22 16:41
+ * @author Administrator
+ * @description 连接Channel
+ * @date
  */
-public final class Param {
+public final class RabbitMQConnection {
 
-    private static ConnectionFactory factory;
+    private static final ConnectionFactory FACTORY;
     private static Connection connection;
     private static Channel channel;
 
+    //    @Value("${spring:rabbitmq:host}")
+    private static String host = "8.136.185.56";
+
+    //    @Value("${spring:rabbitmq:port}")
+    private static String port = "5672";
+
+    //    @Value("${spring:rabbitmq:username}")
+    private static String username = "guest";
+
+    //    @Value("${spring:rabbitmq:password}")
+    private static String password = "guest";
+
+    //    @Value("${spring:rabbitmq:virtual-host}")
+    private static String virtualHost = "/";
+
+
     static {
-        factory = new ConnectionFactory();
-        factory.setHost("11.11.11.121");
-        factory.setPort(5672);
-        factory.setUsername("guest");
-        factory.setPassword("guest");
+        FACTORY = new ConnectionFactory();
+        FACTORY.setHost(host);
+        FACTORY.setPort(Integer.parseInt(port));
+        FACTORY.setUsername(username);
+        FACTORY.setPassword(password);
+        FACTORY.setVirtualHost(virtualHost);
         try {
-            connection = factory.newConnection();
+            connection = FACTORY.newConnection();
             channel = connection.createChannel();
-        } catch (IOException | TimeoutException e) {
-            e.printStackTrace();
+        } catch (IOException | TimeoutException ioException) {
+            ioException.printStackTrace();
         }
+    }
+
+    public static Connection getConnection() {
+        return connection;
+    }
+
+    public static Channel createChannel() {
+        Channel connectionChannel = null;
+        try {
+            connectionChannel = connection.createChannel();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+        return connectionChannel;
     }
 
     /**
@@ -53,13 +85,14 @@ public final class Param {
     }
 
     /**
+     * @param queue      队列名.而存在默认值的意思是.你可以创建一个不重复名称的一个临时队列.(交换机没法创建临时的)
+     * @param durable    false 持久化
+     * @param exclusive  false 排他队列,如果你希望创建一个队列,并且只有你当前这个程序(或进程)进行消费处理.不希望别的客户端读取到这个队列.用这个方法甚好.而同时如果当进程断开连接.这个队列也会被销毁.不管是否设置了持久化或者自动删除.
+     * @param autoDelete true 自动销毁（当最后一个消费者取消订阅时队列会自动移除，对于临时队列只有一个消费服务时适用，）
+     * @param arguments
      * @throws IOException
      * @description 声明队列
-     * $queue 队列名.而存在默认值的意思是.你可以创建一个不重复名称的一个临时队列.(交换机没法创建临时的) 如获得通道后执行如下代码.
      * $passsive false 只判断不创建(判断该队列是否存在) 只查询不创建.如果为true,如果存在这个队列,则会返回队列的信息.如果不存在这个队列..则会抛异常(与交换机不同的是,如果交换机判断存在,则返回NULL,否则异常)
-     * $durable false 重启重建(持久化)
-     * $exclusive false 排他队列,如果你希望创建一个队列,并且只有你当前这个程序(或进程)进行消费处理.不希望别的客户端读取到这个队列.用这个方法甚好.而同时如果当进程断开连接.这个队列也会被销毁.不管是否设置了持久化或者自动删除.
-     * $auto_delete true 自动销毁（当最后一个消费者取消订阅时队列会自动移除，对于临时队列只有一个消费服务时适用，）
      * $nowait false 执行后不需要等结果
      * $arguments null
      * $arguments = new AMQPTable([
@@ -72,20 +105,20 @@ public final class Param {
      * ]
      * );
      */
-    public static void queueDeclare() throws IOException {
-        channel.queueDeclare("queueName", false, true, false, null);
+    public static void queueDeclare(String queue, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments) throws IOException {
+        channel.queueDeclare("queueName", false, false, false, null);
     }
 
     /**
+     * @param queue      队列名
+     * @param exchange   交换机名
+     * @param routingKey 路由名（对应）
+     * @param arguments  额外参数
      * @throws IOException
      * @description 绑定队列
-     * $queue 队列名
-     * $exchange 交换机名
-     * $routing_key 路由名（对应）
      * $nowait 不等待执行结果
-     * $arguments 额外参数
      */
-    public static void queueBind() throws IOException {
+    public static void queueBind(String queue, String exchange, String routingKey, Map<String, Object> arguments) throws IOException {
         channel.queueBind("queue_delete1", "exchange_delete1", "type");
     }
 
@@ -105,4 +138,5 @@ public final class Param {
         }, consumerTag -> {
         });
     }
+
 }

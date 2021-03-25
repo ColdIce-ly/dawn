@@ -2,8 +2,7 @@ package com.xiaoyuan.mq.rabbitmq.base.direct;
 
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
+import com.xiaoyuan.mq.rabbitmq.base.config.RabbitMQConnection;
 
 /**
  * @author liyuan
@@ -18,27 +17,29 @@ public class Provider {
      * @throws Exception
      */
     public static void main(String[] argv) throws Exception {
-        // 获取到连接以及mq通道
-        Connection connection = RabbitMqConnectionUtil.getConnection();
-        Channel channel = connection.createChannel();
-
-        // 声明exchange
-        channel.exchangeDeclare(ParamConstant.EXCHANGE_NAME, "direct");
+        Channel channel = RabbitMQConnection.createChannel();
+        channel.exchangeDeclare(ParamConstant.EXCHANGE_NAME, ParamConstant.EXCHANGE_TYPE);
 
         // 消息内容
-        String message = "我下架了商品!";
-        // 两个都可以消费
-//        String key = "delete";
-        // 1可以消费
-//        String key = "add";
-        // 2可以消费
-//        String key = "update";
-        // 两个都不可以消费
-        String key = "query";
-        channel.basicPublish(ParamConstant.EXCHANGE_NAME, key, null, message.getBytes());
-        System.out.println(" [x] Sent '" + message + "'");
+        String message = "商品信息变更!";
 
-        channel.close();
-        connection.close();
+
+        // 两个都接收到
+        // String key = "delete";
+
+        // 只有1接收到
+        // String key = "add";
+
+
+        // 只有2接收到
+        // String key = "update";
+
+
+        // 两个都接收不到 ,此时消息丢失
+         String key = "query";
+
+
+        channel.basicPublish(ParamConstant.EXCHANGE_NAME, key, null, message.getBytes());
+        System.out.println(" [事件通知] Send '" + message + "'");
     }
 }

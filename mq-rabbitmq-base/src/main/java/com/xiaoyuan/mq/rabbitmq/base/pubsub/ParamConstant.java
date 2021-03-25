@@ -8,10 +8,14 @@ package com.xiaoyuan.mq.rabbitmq.base.pubsub;
  */
 public interface ParamConstant {
 
+    static final String EXCHANGE_TYPE = "fanout";
+
     static final String EXCHANGE_NAME = "test_exchange_fanout";
 
-    static final String QUEUE_NAME_ONE = "test_queue_work1";
+    static final String ROUTING_KEY = "test_routing_key";
 
-    static final String QUEUE_NAME_TWO = "test_queue_work2";
+    static final String QUEUE_NAME_ONE = "test_queue_fanout_work_1";
+
+    static final String QUEUE_NAME_TWO = "test_queue_fanout_work_2";
 
 }

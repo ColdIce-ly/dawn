@@ -2,8 +2,7 @@ package com.xiaoyuan.mq.rabbitmq.base.work;
 
 
 import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
+import com.xiaoyuan.mq.rabbitmq.base.config.RabbitMQConnection;
 
 /**
  * @author liyuan
@@ -17,19 +16,17 @@ import com.xiaoyuan.mq.rabbitmq.base.util.RabbitMqConnectionUtil;
 public class Provider {
 
     public static void main(String[] argv) throws Exception {
-        // 获取到连接以及mq通道
-        Connection connection = RabbitMqConnectionUtil.getConnection();
         // 从连接中创建通道
-        Channel channel = connection.createChannel();
+        Channel channel = RabbitMQConnection.createChannel();
         // 声明队列
         channel.queueDeclare(ParamConstant.QUEUE_NAME, false, false, false, null);
-        for (int i = 0; i < 100; i++) {
+
+        for (int i = 0; i < 1000; i++) {
             // 推送100条消息
             String message = "" + i;
-            System.out.println(" [x] Sent '" + message + "'");
+            System.out.println(" [Provider] Sent '" + message + "'");
             channel.basicPublish("", ParamConstant.QUEUE_NAME, null, message.getBytes());
         }
         channel.close();
-        connection.close();
     }
 }

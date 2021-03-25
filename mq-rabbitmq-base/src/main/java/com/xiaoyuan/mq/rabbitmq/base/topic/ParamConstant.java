@@ -9,6 +9,8 @@ package com.xiaoyuan.mq.rabbitmq.base.topic;
  */
 public interface ParamConstant {
 
+    static final String EXCHANGE_TYPE = "topic";
+
     static final String EXCHANGE_NAME = "test_exchange_topic";
 
     static final String QUEUE_NAME_ONE = "test_queue_topic_work_1";
