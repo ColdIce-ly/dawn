@@ -2,16 +2,21 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/cache-redis-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/designpattern/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jdk-eight/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jvm/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-base/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-stream-client-copy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-stream-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-stream-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-template-client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mq-rabbitmq-template-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/poi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/sms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/spring-cloud-ribbon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/thread-juc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

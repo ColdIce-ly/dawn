@@ -2,80 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7498a4ed-2b72-4a0d-a044-d41176b6b7b9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jdk-eight/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/JdkEightApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/CommonInterFace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/FunctionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MathTowNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MyMath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/function/api/MyPrint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/lambda/LambdaTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/optional/OptionalTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/java/com/xiaoyuan/jdk/eight/stream/StreamTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jdk-eight/src/test/java/com/xiaoyuan/jdk/eight/JdkEightApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsSenderConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/SmsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/util/SmsConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/java/com/xiaoyuan/sms/util/SmsMessageUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sms/src/test/java/com/xiaoyuan/sms/SmsApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/SpringCloudRibbonApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/lb/LoadBalancer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/java/com/xiaoyuan/spring/cloud/ribbon/lb/MyLB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-cloud-ribbon/src/test/java/com/xiaoyuan/spring/cloud/ribbon/SpringCloudRibbonApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/ThreadJucApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/atomi/AtomicDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/atomi/AtomicTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/CompareAndSwap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/CompareAndSwapTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/cas/TestCopyOnWriteArrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/countdownlatch/CountDownLatchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/countdownlatch/LatchDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/volat/ThreadDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/juc/volat/VolatileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ThreadPoolExecutorTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ababab/AlternateDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/ababab/TestABCAlternate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/callable/TestCallable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/callable/ThreadDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/forkjoin/ForkJoinSumCalculate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/forkjoin/TestForkJoinPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/lock/TestLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/lock/Ticket.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/TestScheduledThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/TestThreadPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/pool/ThreadPoolDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Clerk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/Productor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/lock/TestProductorAndConsumerForLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Clerk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Consumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/Productor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/productconsumer/syc/TestProductorAndConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/readwritelock/ReadWriteLockDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/readwritelock/TestReadWriteLock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/thread8monitor/Number.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/java/com/xiaoyuan/threadjuc/thread/thread8monitor/TestThread8Monitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/thread-juc/src/test/java/com/xiaoyuan/threadjuc/ThreadJucApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/netty/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/netty/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/poi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sms/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sms/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/websocket/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/websocket/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +47,6 @@
     </option>
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="vmOptionsForImporter" value="-Xmx768m" />
       </MavenImportingSettings>
     </option>
@@ -124,7 +57,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -134,6 +66,7 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -190,9 +123,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DesignpatternApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="designpattern" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.designpattern.DesignpatternApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JdkEightApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="jdk-eight" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.jdk.eight.JdkEightApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JvmApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="jvm" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.jvm.JvmApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -239,6 +186,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NettyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="netty" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.netty.NettyApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PoiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="poi" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.poi.PoiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="sms" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.sms.SmsApplication" />
@@ -260,6 +221,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WebsocketApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="websocket" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.xiaoyuan.websocket.WebsocketApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.CacheRedisServerApplication" />
       <item itemvalue="Spring Boot.MqRabbitmqBaseApplication" />
@@ -272,19 +240,12 @@
       <item itemvalue="Spring Boot.JdkEightApplication" />
       <item itemvalue="Spring Boot.ThreadJucApplication" />
       <item itemvalue="Spring Boot.SmsApplication" />
+      <item itemvalue="Spring Boot.DesignpatternApplication" />
+      <item itemvalue="Spring Boot.NettyApplication" />
+      <item itemvalue="Spring Boot.PoiApplication" />
+      <item itemvalue="Spring Boot.JvmApplication" />
+      <item itemvalue="Spring Boot.WebsocketApplication" />
     </list>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -317,6 +278,7 @@
       <workItem from="1592979425808" duration="13537000" />
       <workItem from="1593092450983" duration="15024000" />
       <workItem from="1593134885302" duration="8082000" />
+      <workItem from="1617005128592" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="重构初始化">
       <created>1592982323690</created>
@@ -350,20 +312,19 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

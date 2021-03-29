@@ -7,17 +7,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="mq-rabbitmq-base" />
-        <module name="mq-rabbitmq-template-server" />
-        <module name="mq-rabbitmq-template-client" />
         <module name="cache-redis-server" />
-        <module name="jdk-eight" />
-        <module name="mq-rabbitmq-stream-client" />
-        <module name="thread-juc" />
-        <module name="spring-cloud-ribbon" />
         <module name="mq-rabbitmq-stream-server" />
+        <module name="mq-rabbitmq-template-client" />
+        <module name="jvm" />
+        <module name="poi" />
+        <module name="thread-juc" />
+        <module name="websocket" />
+        <module name="mq-rabbitmq-base" />
+        <module name="spring-cloud-ribbon" />
+        <module name="netty" />
+        <module name="mq-rabbitmq-template-server" />
+        <module name="jdk-eight" />
+        <module name="designpattern" />
         <module name="sms" />
         <module name="mq-rabbitmq-stream-client-copy" />
+        <module name="mq-rabbitmq-stream-client" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -35,16 +40,21 @@
       <module name="cache-redis-server" options="-parameters" />
       <module name="cache-redis-template" options="-parameters" />
       <module name="dawn" options="-parameters" />
+      <module name="designpattern" options="-parameters" />
       <module name="jdk-eight" options="-parameters" />
+      <module name="jvm" options="-parameters" />
       <module name="mq-rabbitmq-base" options="-parameters" />
       <module name="mq-rabbitmq-stream-client" options="-parameters" />
       <module name="mq-rabbitmq-stream-client-copy" options="-parameters" />
       <module name="mq-rabbitmq-stream-server" options="-parameters" />
       <module name="mq-rabbitmq-template-client" options="-parameters" />
       <module name="mq-rabbitmq-template-server" options="-parameters" />
+      <module name="netty" options="-parameters" />
+      <module name="poi" options="-parameters" />
       <module name="sms" options="-parameters" />
       <module name="spring-cloud-ribbon" options="-parameters" />
       <module name="thread-juc" options="-parameters" />
+      <module name="websocket" options="-parameters" />
     </option>
   </component>
 </project>
