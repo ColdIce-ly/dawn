@@ -28,6 +28,9 @@
         <module>mq-rabbitmq-stream-server</module>
         <module>mq-rabbitmq-template-client</module>
         <module>mq-rabbitmq-template-server</module>
+        <module>mq-rocketmq-base</module>
+        <module>mq-rocketmq-stream</module>
+        <module>mq-rocketmq-template</module>
         <module>netty</module>
         <module>poi</module>
         <module>sms</module>
