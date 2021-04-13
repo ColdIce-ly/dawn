@@ -15,6 +15,16 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+**/.idea
+**/.idea/
+**/.idea/**
+**/compiler.xml
+**/encodings.xml
+**/misc.xml
+**/vcs.xml
+**/workspace.xml
+**/uiDesigner.xml
+
 *.iws
 *.iml
 *.ipr
@@ -49,8 +59,6 @@ mvnw.cmd
 
 # idea ignore
 .idea/
-**/.idea/
-**/.idea/**
 
 # temp ignore
 *.log
