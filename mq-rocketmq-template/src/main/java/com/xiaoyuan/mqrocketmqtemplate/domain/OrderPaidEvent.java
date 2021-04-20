@@ -3,7 +3,7 @@ package com.xiaoyuan.mqrocketmqtemplate.domain;
 import java.math.BigDecimal;
 
 /**
- * @author ：楼兰
+ * @author ：
  * @date ：Created in 2020/11/28
  * @description:
  **/

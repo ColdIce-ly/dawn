@@ -5,7 +5,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 
 /**
- * @author ：楼兰
+ * @author ：
  * @date ：Created in 2020/12/2
  * @description:
  **/

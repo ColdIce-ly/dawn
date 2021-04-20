@@ -12,7 +12,7 @@ import org.springframework.messaging.converter.StringMessageConverter;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author ：楼兰
+ * @author ：
  * @date ：Created in 2020/11/5
  * @description: 事务消息监听器
  * 关于@RocketMQTransactionListener 这个注解，有点奇怪。2.0.4版本中，是需要指定txProducerGroup指向一个消息发送者组。不同的组可以有不同的事务消息逻辑。
