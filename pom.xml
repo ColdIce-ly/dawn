@@ -20,6 +20,8 @@
     <!-- 服务 -->
     <modules>
         <module>cache-redis-server</module>
+        <module>db-mysql</module>
+        <module>designpattern</module>
         <module>jdk-eight</module>
         <module>jvm</module>
         <module>mq-rabbitmq-base</module>
@@ -102,6 +104,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
             <!--db连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
