@@ -73,3 +73,11 @@ mvnw.cmd
 
 
 /*/.mvn
+
+# Project exclude paths
+/.idea
+/log_dir_IS_UNDEFINED
+/.gitignore
+
+/*/*.iml
+/*/target
