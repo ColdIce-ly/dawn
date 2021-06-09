@@ -2,7 +2,7 @@ package com.xiaoyuan.designpattern.strategy.v1;
 
 /**
  * @author : liyuan  
- * @description :
+ *
  * @date : 2020/9/23 17:44  
  */
 public abstract class AbstractZombie {

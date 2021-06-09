@@ -2,7 +2,7 @@ package com.xiaoyuan.designpattern.chainofresponsibility;
 
 /**
  * @author : liyuan  
- * @description :责任链模式 为请求创建了一个接收者对象的链。
+ * 责任链模式 为请求创建了一个接收者对象的链。
  * 应用场景：
  * 一个请求的处理需要多个对象当中的一个或几个协作处理。
  * 优点:

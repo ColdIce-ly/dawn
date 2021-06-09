@@ -2,7 +2,7 @@ package com.xiaoyuan.designpattern.chainofresponsibility;
 
 /**
  * @author : liyuan  
- * @description :
+ *
  * @date : 2020/9/23 18:22  
  */
 public abstract class Handler {
