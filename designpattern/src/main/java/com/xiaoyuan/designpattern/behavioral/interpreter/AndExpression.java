@@ -14,7 +14,7 @@ public class AndExpression implements Expression {
 
     @Override
     public boolean interpret(String info) {
-        String s[] = info.split("的");
+        String[] s = info.split("的");
         return city.interpret(s[0]) && person.interpret(s[1]);
     }
 }
